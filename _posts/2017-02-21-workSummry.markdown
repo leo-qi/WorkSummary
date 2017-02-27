@@ -1,6 +1,6 @@
 ---
 layout : post
-tile : 2017-02-21工作总结
+title : 2017-02-21工作总结
 author : "Leo Qi"
 Date : 2017-02-21
 catalog: true

@@ -17,7 +17,7 @@ url: "https://leo-qi.github.io/WorkSummary/" # the base hostname & protocol for 
 # Build settings
 markdown: kramdown
 baseurl: /WorkSummary
-permalink: /:title/
+#permalink: /:title/
 
 #disqus-shortname: work-summary
 
@@ -41,7 +41,8 @@ analytics: false
 version: 1.0
 
 gems: [jekyll-paginate, jekyll-seo-tag]
-
+highlighter: rouge
+permalink: pretty
 
 prose:
   rooturl: ''
