@@ -16,6 +16,8 @@ url: "https://leo-qi.github.io/WorkSummary/" # the base hostname & protocol for 
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 baseurl: /WorkSummary
 #permalink: /:title/
 
@@ -23,15 +25,15 @@ baseurl: /WorkSummary
 
 
 #compress.html
-compress_html:
-  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
-  comments: ["<!-- ", " -->"]
-  endings: [all]
-  ignore:
-    envs: [local]
-  blanklines: false
-  profile: false
-  startings: []
+#compress_html:
+#  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+#  comments: ["<!-- ", " -->"]
+#  endings: [all]
+#  ignore:
+#    envs: [local]
+#  blanklines: false
+  #profile: false
+  #startings: []
 
 sass:
   style: compressed
@@ -40,10 +42,10 @@ analytics: false
 
 version: 1.0
 
-gems: [jekyll-paginate, jekyll-seo-tag]
+gems: [jekyll-paginate, jekyll-seo-tag,jekyll-paginate]
 highlighter: rouge
 permalink: pretty
-
+paginate: 10
 prose:
   rooturl: ''
   siteurl: 'https://leo-qi.github.io/WorkSummary/'
