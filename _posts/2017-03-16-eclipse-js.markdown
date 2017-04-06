@@ -10,6 +10,7 @@ tags:
     - MyEclipse
 ---
 
+> 时间是一片片的，好像切成薄片的黄油一样，铺在不同的事情上。——《房间》。
 
 1. 项目中使用了extjs，MyEclipse会进行js校验，占用系统资源，造成电脑很卡。在window->Preferneces->MyEclipse->Validation中去掉JavaScript validator for JS files去掉Manual和Build，不能正常生效，未找到原因。打开项目所在目录下的.project文件，去掉
 ```
