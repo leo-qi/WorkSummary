@@ -44,11 +44,11 @@ SSLSocketFactory sslSocketfactory = sslContext.getSocketFactory();
 ```
 
 4. 建立连接
-  1. 建立Socket连接
+  - 建立Socket连接
   ```java
     SSLSocketsocket = (SSLSocket)sslSocketfactory.createSocket(hostAddress,httpsPort);
   ```
-  2. 建立HttpsURLConnection连接
+  - 建立HttpsURLConnection连接
   ```java
     // 信任所有证书域名
     static HostnameVerifier hv = new HostnameVerifier() {  

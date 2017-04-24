@@ -1,0 +1,27 @@
+---
+layout : post
+title : 2017-04-10：Jboss更改8080端口
+author : "Leo Qi"
+Date : 2017-03-16
+catalog: true
+tags:
+    - Java
+    - Jboss
+---
+Jboss通过修改配置文件来修改端口号，修改之后需要重启服务。
+1. 修改server\defualt\conf\bindingservice.beas\META-INF\bindings-jboss-beans.xml文件
+```xml
+<bean class="org.jboss.services.binding.ServiceBindingMetadata">
+  <property name="serviceName">jboss.web:service=WebServer</property>
+  <property name="bindingName">HttpConnector</property>
+  <property name="port">8080</property>
+  <property name="description">JBoss Web HTTP connector socket; also drives the values for the HTTPS and AJP sockets</property>
+</bean>
+```
+将<property name="port">8080</property>修改为其他值。
+
+2.  另一种方法是修改server\defualt\deploy\jbossweb.sar\server.xml文件
+```xml
+<Connector protocol="HTTP/1.1" port="${jboss.web.http.port}" address="${jboss.bind.address}" connectionTimeout="180000" enableLookups="false" maxThreads="1024" strategy="ms" maxHttpHeaderSize="8192" disableUploadTimeout="true" redirectPort="${jboss.web.https.port}" acceptCount="4000" minProcessors="40" maxProcessors="400" executor="tomcatThreadPool"/>
+```
+将${jboss.web.http.port}修改为其他值。也可以将这部分代码屏蔽掉。
